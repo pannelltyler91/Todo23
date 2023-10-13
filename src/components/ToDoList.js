@@ -1,22 +1,26 @@
 import Card from 'react-bootstrap/Card';
+import Container from'react-bootstrap/Container';
 import AddToDoItem from './AddToDo';
 import { useSelector,useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { deleteItem, updateItem } from '../features/item';
+import '../styles/addItem.css'
 
 function ToDoList(){
     const todoItems = useSelector((state) => state.item.value)
     const dispatch = useDispatch();
     return(
-        <Card>
-            <Card.Body>
+        <Container >
+            <Card className='m-4'>
                 <AddToDoItem/>
-                <Card.Title>
-                    <h1>To Do List</h1>
+            </Card>
+            <Card className='m-4'>
+            <Card.Body>
+                <Card.Title ><h1>To Do List</h1></Card.Title>
                     {todoItems.map((item) => {
                         return(
-                         <Card key={item.id}>
+                         <Card className='m-4' key={item.id}>
                             <Form   onSubmit={(e) => { e.preventDefault(); dispatch(updateItem({item:e.target[0].value,id:item.id}))}}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Control type='text' placeholder={item.item}   />
@@ -28,10 +32,11 @@ function ToDoList(){
                         )
                         
                     })}
-                </Card.Title>
+                
                 
             </Card.Body>
         </Card>
+    </Container>
     )
 }
 
