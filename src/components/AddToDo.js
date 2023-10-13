@@ -11,7 +11,6 @@ function AddToDoItem(){
   const items = useSelector((state) => state.item.value)
   const submitForm = (e) => {
     e.preventDefault();
-    e.target[0].value === "" ? alert("Please enter an item") :
     items.find((element)=> element.item === e.target[0].value)? alert("Item already exists") :
     dispatch(addItem({item:e.target[0].value,id:count+1}));
     e.target[0].value = '';
@@ -21,7 +20,7 @@ function AddToDoItem(){
           <Card  variant="primary">
             <Form onSubmit={submitForm}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control type='text' placeholder="Enter Todo Item" />
+                <Form.Control required type='text' placeholder="Enter Todo Item" />
               </Form.Group>
               <Button  variant="primary" type="submit" >Add Item</Button>
             </Form>

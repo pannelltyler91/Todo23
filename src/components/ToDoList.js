@@ -23,7 +23,7 @@ function ToDoList(){
                          <Card className='m-4' key={item.id}>
                             <Form   onSubmit={(e) => { e.preventDefault(); dispatch(updateItem({item:e.target[0].value,id:item.id}))}}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Control type='text' placeholder={item.item}   />
+                                    <Form.Control required type='text' placeholder={item.item}   />
                                     <Button className='m-1' variant="primary" type="submit">Update</Button>   
                                     <Button className='m-1'onClick={() => {dispatch(deleteItem({id:item.id}))}}>Delete</Button>
                                 </Form.Group>
