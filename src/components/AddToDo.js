@@ -1,14 +1,15 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { addItem } from '../features/item';
 
 function AddToDoItem(){
   const dispatch = useDispatch();
+  const count = useSelector((state) => state.item.count)
   const submitForm = (e) => {
     e.preventDefault();
-    dispatch(addItem({item:e.target[0].value,id:(Math.floor(Math.random() * 50) + e.target[0].value)}));
+    dispatch(addItem({item:e.target[0].value,id:count+1}));
     e.target[0].value = '';
     
   }
