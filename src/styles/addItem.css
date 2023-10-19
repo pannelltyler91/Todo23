@@ -1,0 +1,33 @@
+.primary1-bg {
+    background-color: #F5F5F5;
+    height:100vh;
+}
+.header-footer-bg{
+    background-color: #3498DB;
+    margin:2px;
+}
+.task-item{
+    background-color: #FFFFFF;
+    color:#333333;
+    border: #DDDDDD;
+    margin:4px;
+}
+.completed-task-item{
+    background-color:#A9A9A9;
+    color:#FFFFFF;
+}
+.delete-button{
+    background-color: #E74C3C;
+    margin:1px;
+    border:#E74C3C;
+}
+.edit-button{
+    background-color: #F1C40F;
+    margin:1px;
+    border: #F1C40F;
+}
+.add-button{
+    background-color: #27AE60;
+    margin:1px;
+    border:#27AE60
+}

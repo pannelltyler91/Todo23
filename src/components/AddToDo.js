@@ -17,12 +17,12 @@ function AddToDoItem(){
     
   }
     return(
-          <Card  variant="primary">
+          <Card className='header-footer-bg' >
             <Form onSubmit={submitForm}>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group  controlId="formBasicEmail">
                 <Form.Control required type='text' placeholder="Enter Todo Item" />
               </Form.Group>
-              <Button  variant="primary" type="submit" >Add Item</Button>
+              <Button  className='add-button' type="submit" >Add Item</Button>
             </Form>
           </Card>
     )

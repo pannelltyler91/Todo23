@@ -11,21 +11,22 @@ function ToDoList(){
     const todoItems = useSelector((state) => state.item.value)
     const dispatch = useDispatch();
     return(
-        <Container >
-            <Card className='m-4'>
-                <AddToDoItem/>
-            </Card>
-            <Card className='m-4'>
-            <Card.Body>
+        <Container fluid className='primary1-bg' >
+            <AddToDoItem />
+            <Card >
+            <Card.Body >
                 <Card.Title ><h1>To Do List</h1></Card.Title>
                     {todoItems.map((item) => {
                         return(
-                         <Card className='m-4' key={item.id}>
+                         <Card  key={item.id}>
                             <Form   onSubmit={(e) => { e.preventDefault(); dispatch(updateItem({item:e.target[0].value,id:item.id}))}}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Control required type='text' placeholder={item.item}   />
-                                    <Button className='m-1' variant="primary" type="submit">Update</Button>   
-                                    <Button className='m-1'onClick={() => {dispatch(deleteItem({id:item.id}))}}>Delete</Button>
+                                    <Form.Control required type='text' placeholder={item.item}   />  
+                                </Form.Group>
+                                <Form.Group>
+                                <Button className='edit-button' variant="primary" type="submit">Update</Button>
+                                <Button className='delete-button'onClick={() => {dispatch(deleteItem({id:item.id}))}}>Delete</Button>
+                                <Form.Check className='m-3' reverse  type="checkbox" id="task-complete" label="Task Complete" onClick={(e) => {e.target.checked ? e.target.parentElement.parentElement.parentElement.className = 'completed-task-item': e.target.parentElement.parentElement.parentElement.className = 'task-item' }} />
                                 </Form.Group>
                             </Form>
                          </Card>
