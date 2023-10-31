@@ -1,19 +1,27 @@
 .primary1-bg {
-    background-color: #F5F5F5;
-    height:100vh;
+    background-color: #27AE60;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 .form-control{
     background-color: #F5F5F5;
+    margin: 1px;
+    
 }
 .header-footer-bg{
     background-color: #3498DB;
-    margin-top:4px;
     margin-bottom:4px;
+    width:auto;
 }
 .task-item{
     background-color: #FFA500;
     color:#333333;
     margin:4px;
+    padding:4px;
 }
 .task-item-two{
     border:#27AE60 solid 3px;
