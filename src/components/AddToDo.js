@@ -18,9 +18,9 @@ function AddToDoItem(){
   }
     return(
           <Card className='header-footer-bg' >
-            <Form onSubmit={submitForm}>
+            <Form onSubmit={submitForm} >
               <Form.Group  controlId="formBasicEmail">
-                <Form.Control required type='text' placeholder="Enter Todo Item" />
+                <Form.Control required type='text' placeholder="Enter Todo Item" className='form-control'/>
               </Form.Group>
               <Button  className='add-button' type="submit" >Add Item</Button>
             </Form>

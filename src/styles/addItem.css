@@ -2,19 +2,27 @@
     background-color: #F5F5F5;
     height:100vh;
 }
+.form-control{
+    background-color: #F5F5F5;
+}
 .header-footer-bg{
     background-color: #3498DB;
-    margin:2px;
+    margin-top:4px;
+    margin-bottom:4px;
 }
 .task-item{
-    background-color: #FFFFFF;
+    background-color: #FFA500;
     color:#333333;
-    border: #DDDDDD;
     margin:4px;
+}
+.task-item-two{
+    border:#27AE60 solid 3px;
+
 }
 .completed-task-item{
     background-color:#A9A9A9;
     color:#FFFFFF;
+    
 }
 .delete-button{
     background-color: #E74C3C;
